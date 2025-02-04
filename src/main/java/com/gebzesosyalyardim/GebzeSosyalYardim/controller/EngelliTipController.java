@@ -7,6 +7,8 @@ package com.gebzesosyalyardim.GebzeSosyalYardim.controller;
 import com.gebzesosyalyardim.GebzeSosyalYardim.entities.EngelliTip;
 import com.gebzesosyalyardim.GebzeSosyalYardim.service.EngelliTipService;
 import java.util.List;
+
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,14 +23,15 @@ import org.springframework.web.bind.annotation.RestController;
  *
  * @author emirh
  */
+
+/**
+ * dönüş tipleri doğrudan entity'leri içermemelidir. bunun yerine dto gibi objeler kullanılır ve sadece istemcinin ihtiyaç duyduğu fiekl'lar döner
+ */
 @RestController
 @RequestMapping("/api/engellitip")
+@RequiredArgsConstructor // final değişkenler için constructor oluşturur
 public class EngelliTipController {
     private final EngelliTipService engelliTipService;
-
-    public EngelliTipController(EngelliTipService engelliTipService) {
-        this.engelliTipService = engelliTipService;
-    }
 
     @PostMapping
     public ResponseEntity<EngelliTip> createEngelliTip(@RequestBody EngelliTip engelliTip) {

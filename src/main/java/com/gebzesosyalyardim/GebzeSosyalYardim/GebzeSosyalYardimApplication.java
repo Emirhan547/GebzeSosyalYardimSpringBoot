@@ -9,9 +9,10 @@ import java.net.URISyntaxException;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.ComponentScan;
 
-@SpringBootApplication(scanBasePackages = "com.gebzesosyalyardim")
-@EntityScan("com.gebzesosyalyardim.GebzeSosyalYardim.entities")
-@ComponentScan(basePackages = "com.gebzesosyalyardim.GebzeSosyalYardim")
+@SpringBootApplication//(scanBasePackages = "com.gebzesosyalyardim")
+//@EntityScan("com.gebzesosyalyardim.GebzeSosyalYardim.entities")
+//@ComponentScan(basePackages = "com.gebzesosyalyardim.GebzeSosyalYardim")
+// yorum satırına alınan anotasyonlar spring boot yeni sürümlerinde gereksizdir.
 public class GebzeSosyalYardimApplication {
 
     public static void main(String[] args) {
