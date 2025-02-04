@@ -106,143 +106,176 @@ import com.gebzesosyalyardim.GebzeSosyalYardim.service.Impl.YardimStatuServiceIm
 import com.gebzesosyalyardim.GebzeSosyalYardim.service.Impl.YardimTurServiceImpl;
 
 
-
 /**
- *
  * @author emirh
  */
 @Configuration
 public class ServiceConfig {
-   @Bean
+
+    // @Service anotasyonuyla belirtilen sınıfların bean olarak tanımlanması gereksizdir. Spring bu bean'leri oluşturur.
+
+    /*@Bean
     public EngelliTipService engelliTipService(EngelliTipRepository engelliTipRepository) {
         return new EngelliTipServiceImpl(engelliTipRepository);
-    } 
+    }
+
     @Bean
     public GuvenceBirimService guvenceBirimService(GuvenceBirimRepository guvenceBirimRepository) {
         return new GuvenceBirimServiceImpl(guvenceBirimRepository);
     }
+
     @Bean
     public GuvenceService guvenceService(GuvenceRepository guvenceRepository) {
         return new GuvenceServiceImpl(guvenceRepository);
     }
+
     @Bean
     public HastalikService hastalikService(HastalikRepository hastalikRepository) {
         return new HastalikServiceImpl(hastalikRepository);
-}
+    }
+
     @Bean
     public KisiAskerlikService kisiAskerlikService(KisiAskerlikRepository kisiAskerlikRepository) {
         return new KisiAskerlikServiceImpl(kisiAskerlikRepository);
-}
+    }
+
     @Bean
     public KisiDetayService kisiDetayService(KisiDetayRepository kisiDetayRepository) {
         return new KisiDetayServiceImpl(kisiDetayRepository);
-}
+    }
+
     @Bean
     public KisiEgitimDurumService kisiEgitimDurumService(KisiEgitimDurumRepository kisiEgitimdurumRepository) {
         return new KisiEgitimDurumServiceImpl(kisiEgitimdurumRepository);
-}
+    }
+
     @Bean
     public KisiEngelService kisiEngelService(KisiEngelRepository kisiEngelRepository) {
         return new KisiEngelServiceImpl(kisiEngelRepository);
-}
+    }
+
     @Bean
     public KisiHastalikService kisiHastalikService(KisiHastalikRepository kisiHastalikRepository) {
         return new KisiHastalikServiceImpl(kisiHastalikRepository);
-}
+    }
+
     @Bean
     public KisiIletisimService kisiIletisimService(KisiIletisimRepository kisiIletisimRepository) {
         return new KisiIletisimServiceImpl(kisiIletisimRepository);
-}
+    }
+
     @Bean
     public KisiTemelService kisiTemelService(KisiTemelRepository kisiTemelRepository) {
         return new KisiTemelServiceImpl(kisiTemelRepository);
-}
+    }
+
     @Bean
     public KisiYakinlarService kisiYakinlarService(KisiYakinlarRepository kisiYakinlarRepository) {
         return new KisiYakinlarServiceImpl(kisiYakinlarRepository);
-}
+    }
+
     @Bean
     public KisiYakinlarStatuService kisiYakinlarStatuService(KisiYakinlarRepository kisiYakinlarRepository) {
         return new KisiYakinlarStatuServiceImpl(kisiYakinlarRepository);
     }
+
     @Bean
     public KullaniciService kullaniciService(KullaniciRepository kullaniciRepository) {
         return new KullaniciServiceImpl(kullaniciRepository);
-}
+    }
+
     @Bean
     public KurumService kurumService(KurumRepository kurumRepository) {
         return new KurumServiceImpl(kurumRepository);
-}
+    }
+
     @Bean
     public MuracaatBilgiService muracaatBilgiService(MuracaatBilgiRepository muracaatBilgiRepository) {
         return new MuracaatBilgiServiceImpl(muracaatBilgiRepository);
-}
+    }
+
     @Bean
     public MuracaatDurumService muracaatDurumService(MuracaatDurumRepository muracaatDurumRepository) {
         return new MuracaatDurumServiceImpl(muracaatDurumRepository);
-}
+    }
+
     @Bean
     public MuracaatService muracaatService(MuracaatRepository muracaatRepository) {
         return new MuracaatServiceImpl(muracaatRepository);
-}
+    }
+
     @Bean
     public MuracaatYardimTalepService muracaatYardimtalepService(MuracaatYardimTalepRepository muracaatYardimtalepRepository) {
         return new MuracaatYardimTalepServiceImpl(muracaatYardimtalepRepository);
-}
+    }
+
     @Bean
     public OkulService okulService(OkulRepository okulRepository) {
         return new OkulServiceImpl(okulRepository);
-}
-@Bean
+    }
+
+    @Bean
     public TutanakBorcService tutanakBorcService(TutanakBorcRepository tutanakBorcRepository) {
         return new TutanakBorcServiceImpl(tutanakBorcRepository);
-}
+    }
+
     @Bean
     public TutanakDurumService tutanakDurumService(TutanakDurumRepository tutanakDurumRepository) {
         return new TutanakDurumServiceImpl(tutanakDurumRepository);
-}
+    }
+
     @Bean
     public TutanakEvDurumService tutanakEvdurumService(TutanakEvDurumRepository tutanakEvdurumRepository) {
         return new TutanakEvDurumServiceImpl(tutanakEvdurumRepository);
-}
+    }
+
     @Bean
     public TutanakEvEsyalariService tutanakEvesyalariService(TutanakEvEsyalariRepository tutanakEvesyalariRepository) {
         return new TutanakEvEsyalariServiceImpl(tutanakEvesyalariRepository);
-}
+    }
+
     @Bean
     public TutanakEvTipService tutanakEvetipService(TutanakEvTipRepository tutanakEvtipRepository) {
         return new TutanakEvTipServiceImpl(tutanakEvtipRepository);
-}
+    }
+
     @Bean
     public TutanakGelirService tutanakGelirService(TutanakGelirRepository tutanakGelirRepository) {
         return new TutanakGelirServiceImpl(tutanakGelirRepository);
-}
+    }
+
     @Bean
     public TutanakMulkiyetService tutanakMulkiyetService(TutanakMulkiyetRepository tutanakMulkiyetRepository) {
         return new TutanakMulkiyetServiceImpl(tutanakMulkiyetRepository);
-}
+    }
+
     @Bean
     public TutanakSosyalGuvenceService tutanakSosyalguvenceService(TutanakSosyalGuvenceRepository tutanakSosyalguvenceRepository) {
         return new TutanakSosyalGuvenceServiceImpl(tutanakSosyalguvenceRepository);
-}
+    }
+
     @Bean
     public TutanakYakacakService tutanakYakacakService(TutanakYakacakRepository tutanakYakacakRepository) {
         return new TutanakYakacakServiceImpl(tutanakYakacakRepository);
-}
+    }
+
     @Bean
     public YakinlikService yakinlikService(YakinlikRepository yakinlikRepository) {
         return new YakinlikServiceImpl(yakinlikRepository);
-}
+    }
+
     @Bean
     public YardimAltService yardimAltService(YardimAltRepository yardimAltRepository) {
         return new YardimAltServiceImpl(yardimAltRepository);
-}
+    }
+
     @Bean
     public YardimStatuService yardimStatuService(YardimStatuRepository yardimStatuRepository) {
         return new YardimStatuServiceImpl(yardimStatuRepository);
-}
+    }
+
     @Bean
     public YardimTurService yardimTurService(YardimTurRepository yardimTurRepository) {
         return new YardimTurServiceImpl(yardimTurRepository);
-}
+    }*/
 }

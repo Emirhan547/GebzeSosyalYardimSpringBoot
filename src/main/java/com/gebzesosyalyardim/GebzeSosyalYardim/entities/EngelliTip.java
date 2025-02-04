@@ -32,13 +32,13 @@ public class EngelliTip {
     @Column(name = "TIP_ID")
     private Long tipId;
 
-    @Column(name = "TIP_ISIM", nullable = false, length = 255)
+    @Column(name = "TIP_ISIM", nullable = false/* default 255, length = 255*/)
     private String tipIsim;
 
     @Column(name = "KAYIT_TARIHI", columnDefinition = "TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP")
     private ZonedDateTime kayitTarihi;
 
-    @Column(name = "AKTIF", nullable = true)
+    @Column(name = "AKTIF"/*, nullable = true*/)
     private Integer aktif;
 
     @Column(name = "GUNCELLEME_TARIHI", columnDefinition = "TIMESTAMP WITH TIME ZONE")

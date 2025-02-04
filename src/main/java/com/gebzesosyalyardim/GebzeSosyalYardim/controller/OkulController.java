@@ -7,6 +7,8 @@ package com.gebzesosyalyardim.GebzeSosyalYardim.controller;
 import com.gebzesosyalyardim.GebzeSosyalYardim.entities.Okul;
 import com.gebzesosyalyardim.GebzeSosyalYardim.service.OkulService;
 import java.util.List;
+
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,13 +24,10 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/api/okullar")
+@RequiredArgsConstructor
 public class OkulController {
-    private final OkulService okulService;
 
-    @Autowired
-    public OkulController(OkulService okulService) {
-        this.okulService = okulService;
-    }
+    private final OkulService okulService;
 
     @PostMapping
     public Okul createOkul(@RequestBody Okul okul) {
